@@ -125,7 +125,10 @@
 #backtop.mcOut {
     opacity:0;
 }
-
+body{
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 1.5em;
+  }
 @media screen and (max-width: 768px)
 {
     .col-sm-4{
@@ -143,5 +146,16 @@
 
     #lienhe{
         margin-top: 30px;
+    }
+
+    .container{
+        padding-right: 15px;
+        padding-left: 15px;
+        max-width: 1260px;
+    }
+    
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
