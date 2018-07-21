@@ -68,7 +68,7 @@
 
    <div class="container-fluid bg-grey">
        <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 slideanim">
                 <span class="glyphicon glyphicon-globe logo"></span> 
             </div>
             <div class="col-sm-8">
@@ -83,7 +83,7 @@
             </div>
          </div>
         </div>  
-    <div class="container-fluid text-center" id="dichvu">
+    <div class="container-fluid text-center slideanim" id="dichvu">
             <h2>Dịch vụ</h2>
             <p>Các dịch vụ của chúng tôi bao gồm</p><br><br>
             <div class="row">
@@ -127,7 +127,7 @@
     <div class="container-fluid text-center bg-grey" id="duan">
         <h2>Dự án tiêu biểu</h2>
         <h4>Một trong những dự án website myclass đã triển khai</h4>
-        <div class="row text-center">
+        <div class="row text-center slideanim">
             <div class="col-sm-4 mrbottom"> 
                     <div class="ui grey segment">
                             <div class="thumbnail">
@@ -211,7 +211,7 @@
                     <h3>Chọn bảng giá mà bạn muốn xây dựng website</h3>
                     <br><br>
             </div>
-            <div class="row">
+            <div class="row slideanim">
                 <div class="col-sm-4 text-center mrbottom">
                         <div class="ui raised segments" style="border: thin solid #1ECBF4;">
                             <div class="ui segment" style="background-color: #1ECBF4;">
@@ -286,7 +286,7 @@
                 <p><span class="glyphicon glyphicon-earphone"></span>&nbsp069852432</p>
                 <p><span class="glyphicon glyphicon-envelope"></span>&nbspExemple@gmail.com</p>
             </div>
-            <div class="col-sm-7"  id="lienhe">
+            <div class="col-sm-7 slideanim"  id="lienhe">
                 <h2 class="text-left">LIÊN HỆ</h2>
                <div class="row">
                     <div class="col-sm-6 form-group">
@@ -318,5 +318,21 @@
         <p>Copyright © 2010 - 2018 Cione, 
                 design by Tran Anh Chuong</p>
     </footer>
+
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                $(".slideanim").each(function(){
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if(pos < winTop + 600)
+                    {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
